@@ -3,16 +3,13 @@ Aplikacja powinna umożliwić użytkownikom dokonanie rezerwacji biletu online d
 
 ## Wymagania Funkcjonalne:
 1. Możliwość rezerwacji dowolnej liczby biletów przez klienta kina
-2. Wyświetlanie informacji o aktualnie dostępnych filmach (tytuł, premiera, długość,
-aktorzy)
-3. Wyświetlanie nadchodzących seansów dla wybranego filmu (termin, godzina,
-dostępne miejsca, sala)
-4. Wyświetlanie szczegółowych informacji o jednym konkretnym seansie(opis, aktorzy...)
+2. Wyświetlanie informacji o aktualnie dostępnych filmach (tytuł, premiera, długość)
+3. Wyświetlanie nadchodzących seansów dla wybranego filmu (data, godzina, dostępne miejsca, sala)
+4. Wyświetlanie szczegółowych informacji o wybranym filmie(opis, ograniczenia wiekowe, jezyk oryginalny, jezyk lektor, aktorzy, napisy)
 5. Możliwość wystawienia recenzji po uczestnictwie w seansie
 6. Wyświetlanie historii odbytych już seansów dla kazdego filmu
-7. Wyświetlanie obecnie najpopularniejszych filmów i nadchodzących premier
-8. Generowanie raportu o sprzedanych biletach na wybrany film (ilość, przychód) przez
-administratora
+7. Wyświetlanie pięciu najpopularniejszych filmów
+8. Generowanie raportu o sprzedanych biletach na wybrany film (ilość, srednia cena za bilet, laczy przychod) przez administratora
 9. Dodanie filmu do bazy kina przez administratora (z wszystkimi informacjami o nim)
 10. Dodanie seansu do bazy kina przez administratora (z wszystkimi informacjami o nim)
 11. Wgląd przez administratora do rezerwacji dowolnego klienta

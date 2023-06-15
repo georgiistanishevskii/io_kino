@@ -49,6 +49,21 @@ def main():
     return render_template("wyswietl_filmy.html", filmy = filmy)
 
 
+@wyswietl_filmy.route("/popularne")
+def popularne():
+    """function views most popular movies"""
+    
+    filmy = []
+    g.cursor.execute("SELECT * FROM wyswietl_filmy_popularne")
+    for row in g.cursor.fetchall():
+        filmy.append( {
+                "id":       row[0], 
+                "tytul":    row[1], 
+                "premiera": row[2], 
+                "dlugosc":  row[3]
+            })
+    return render_template("wyswietl_filmy_popularne.html", filmy = filmy)
+
 
 @wyswietl_filmy.route("/a_wyswietl_filmy")
 def a_wyswietl_filmy():
