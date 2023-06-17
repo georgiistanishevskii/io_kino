@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, g
+from werkzeug.exceptions import HTTPException
 import pyodbc
 
 from bd_connection import connection
@@ -9,6 +10,18 @@ from addMovieScreening import addMovieScreening
 from bookTicket import bookTicket 
 
 wyswietl_filmy = Flask(__name__)
+
+
+@wyswietl_filmy.errorhandler(Exception)
+def handle_exception(e):
+    # HTTP errors
+    if isinstance(e, HTTPException):
+        return e
+
+    # non-HTTP exceptions
+    e_msg_data = str(e).split("[SQL Server]")[1]
+    e_msg = e_msg_data.split("(")[0]
+    return render_template("error.html", e=e_msg), 500
 
 
 @wyswietl_filmy.before_request
